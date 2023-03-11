@@ -6,6 +6,10 @@
 //              Macbook Pro M2 MacOS 12.6.3
 //              Linux Fedora 6.1.14-200,fc37.aarch64              
 //
+//  Compile and run
+//      gcc -o dualARM64 dualARM64.S
+//      ./dualARM64
+//
 // include my MACROS for cross compliation on Linux and Apple Silicon
 #include "apple_linux_macros.S"
 
