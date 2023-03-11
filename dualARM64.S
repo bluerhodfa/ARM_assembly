@@ -30,7 +30,9 @@ start:  LLD_ADDR        x0, StartStr
         b               code
 // program code
 code:
-
+        LLD_ADDR        x0, helloFred
+        mov             x1, xzr
+        CRT             printf
 // Branch to exit
         b               end
 // 
@@ -48,6 +50,7 @@ exit:   ldp             x20, x30, [sp], 16
 
 // Pogram data section
         .data
-StartStr:  .asciz  "Program start \n\n"
-ExitStr:   .asciz  "Program exited successfully \n"
+StartStr:       .asciz  "Program start \n\n"
+ExitStr:        .asciz  "Program exited successfully \n"
+helloFred:      .asciz  "\n\t Hello Fred \n\n"
         .end
