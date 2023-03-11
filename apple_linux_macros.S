@@ -33,6 +33,6 @@ main:
         adrp    \xreg, \label@PAGE
         add     \xreg, \xreg, \label@PAGEOFF
 #else
-        ldr         \xreg, =\label
+        ldr     \xreg, =\label
 #endif
 .endm
