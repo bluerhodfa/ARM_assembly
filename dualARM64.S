@@ -50,7 +50,12 @@ exit:   ldp             x20, x30, [sp], 16
 
 // Pogram data section
         .data
-StartStr:       .asciz  "Program start \n\n"
-ExitStr:        .asciz  "Program exited successfully \n"
-helloFred:      .asciz  "\n\t Hello Fred \n\n"
+StartStr:       .byte 0x1B      // clear screen 
+		.byte 'c'	// and start msg at
+		.byte 1		// top of screen
+                .asciz  "Program start \n\n"
+                .asciz  "\n\n"
+                .byte 255
+ExitStr:        .asciz  "Program exited successfully \n\n"
+helloFred:      .asciz  "\t Hello Fred \n\n"
         .end
