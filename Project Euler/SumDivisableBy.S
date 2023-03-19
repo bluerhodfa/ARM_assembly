@@ -85,7 +85,7 @@ _print:
 	beq		_15
 	// check we are in the _15 loop
 	cmp		x10, #15
-    sub		x13, x13, x14	
+	sub		x13, x13, x14	
 	mov 	x8,  x13
 	str 	x8, [sp]
 	adrp	x0, Lstr@PAGE
