@@ -351,3 +351,5 @@ MigrationBackup/
 .ionide/
 .vscode/sftp.json
 ARM_assembly.code-workspace
+dualARM64
+Project Euler/SumDivisableBy
