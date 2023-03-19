@@ -43,12 +43,12 @@ _5:
 
 	mov 	x9,  #999
 	mov 	x10, #5
-    b		_loop	
+	b		_loop	
 
 _15:
 	mov 	x9,  #999
 	mov 	x10, #15
-    b		_loop	
+	b		_loop	
 
 _loop:
 	// Decrement loop counter
@@ -63,7 +63,7 @@ _loop:
 	// Branch to update the total to if x12 is 0
 	cbz		x12, _total
 	// back to top of the loop
-    b       _loop       
+	b       _loop       
 
 _total:
   	cmp		x10, #15
