@@ -14,7 +14,6 @@
 //
 // Tested on: 
 //              Macbook Pro M2 MacOS 12.6.3
-//              Linux Fedora 6.1.14-200,fc37.aarch64              
 //
 //  Compile and run
 //      gcc -o SumDivisibleBy SumDivisibleBy.S
