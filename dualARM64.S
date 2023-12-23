@@ -57,5 +57,5 @@ StartStr:       .byte 0x1B      // clear screen
                 .asciz  "\n\n"
                 .byte 255
 ExitStr:        .asciz  "Program exited successfully \n\n"
-helloFred:      .asciz  "\t Hello Fred \n\n"
+helloFred:      .asciz  "\t Hello Fred %d\n\n"
         .end
