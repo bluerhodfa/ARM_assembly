@@ -19,6 +19,7 @@
 //      gcc -o SumDivisibleBy SumDivisibleBy.S
 //      ./SumDivisibleBy
 //
+#include "../aarch64_macros.S"
 	.p2align 2
 	.text
 // application start point
@@ -88,11 +89,10 @@ _print:
 	sub		x13, x13, x14	
 	mov 	x8,  x13
 	str 	x8, [sp]
-	adrp	x0, Lstr@PAGE
-	add 	x0, x0, Lstr@PAGEOFF
+  LLD_ADDR  x0, Lstr
 	mov 	x1, xzr
 	// Call variadic function from C Runtime Library
-	bl 		_printf
+  CRT printf
 
 	b		_exit
 
