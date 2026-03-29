@@ -55,7 +55,7 @@ _loop:
 	// Decrement loop counter
 	sub		x9, x9,  #1	
 	// end when we get to 0 in x0 loop counter
-	cbz     x9, _print
+	cbz   x9, _print
 
 	// input: x9=dividend, x10=divisor
 	udiv	x11, x9, x10
@@ -64,19 +64,19 @@ _loop:
 	// Branch to update the total to if x12 is 0
 	cbz		x12, _total
 	// back to top of the loop
-	b       _loop       
+	b     _loop       
 
 _total:
-  	cmp		x10, #15
-  	beq		_15tot
+  cmp		x10, #15
+  beq		_15tot
 
-	add		x13, x13, x9
+	 add	x13, x13, x9
 	// Return to loop
-	b		_loop
+	 b		_loop
 _15tot:
-    add    x14, x14, x9
+   add    x14, x14, x9
 	// Return to loop
-	b		_loop
+	 b		_loop
 
 
 _print:
@@ -99,8 +99,8 @@ _print:
 // Normal end of program
 _exit:
 	ldp x20, x30, [sp], 16
-   	mov w0, wzr
-   	ret
+  mov w0, wzr
+  ret
 	.cfi_endproc
 
 	.data
