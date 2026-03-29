@@ -23,9 +23,9 @@
 	.p2align 2
 	.text
 // application start point
-	.global _main
+	  GLABEL main
 
-_main:                  // void main()
+MAIN                  // void main()
 	.cfi_startproc
     // preserve the stack
 	stp 	x20,x30, [sp, -16]!
@@ -35,9 +35,9 @@ _main:                  // void main()
 	mov 	x9,  #1001		// Loop max
 	mov 	x10, #3			// sumby 3
 	mov 	x11, #0			// udiv answer
-  	mov 	x12, #0			// msub answer
-  	mov 	x13, #0			// sum of 3 and 5 divisors
-  	mov 	x14, #0			// sum of 15 divisor
+  mov 	x12, #0			// msub answer
+  mov 	x13, #0			// sum of 3 and 5 divisors
+  mov 	x14, #0			// sum of 15 divisor
 	b		_loop
 
 _5:
